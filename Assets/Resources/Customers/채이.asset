@@ -28,3 +28,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5a5c8f78fc2d9f147b0c48f1f5e3f2eb, type: 3}
   - {fileID: 21300000, guid: b7b245f946ad9a34f8aedb7f45685df2, type: 3}
   - {fileID: 21300000, guid: b57a67d7be7bc244e9f96a62b247641d, type: 3}
+  portraitSetting:
+    positionY: 56
+    size: {x: 669, y: 751}

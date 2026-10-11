@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb98840568d2d894a87cb54379d9eebf, type: 3}
-  m_Name: "\uBCF5\uBD84\uC790"
+  m_Name: "\uBCF5\uBD84\uC790\uAD6D\uD654\uCC28"
   m_EditorClassIdentifier: 
-  drinkName: "\uBCF5\uBD84\uC790"
-  requiredBases: 02000000
+  drinkName: 
+  price: 0
+  requiredBases: 020000000e000000
   requiredToppings: 
   resultSprite: {fileID: 0}
