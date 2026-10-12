@@ -3664,6 +3664,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 273700081437393958, guid: 87ca9ce4f33cd3d48b0b75dee76a1743, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 781
+      objectReference: {fileID: 0}
+    - target: {fileID: 273700081437393958, guid: 87ca9ce4f33cd3d48b0b75dee76a1743, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 211
+      objectReference: {fileID: 0}
     - target: {fileID: 2629683708859397272, guid: 87ca9ce4f33cd3d48b0b75dee76a1743, type: 3}
       propertyPath: m_Name
       value: DialogueCanvas
@@ -3776,6 +3784,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4207593003150632240, guid: 87ca9ce4f33cd3d48b0b75dee76a1743, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 781
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207593003150632240, guid: 87ca9ce4f33cd3d48b0b75dee76a1743, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 211
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526454770329046958, guid: 87ca9ce4f33cd3d48b0b75dee76a1743, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a9801f7e61210734397d1df998ba179b, type: 3}
+    - target: {fileID: 6989197408848495950, guid: 87ca9ce4f33cd3d48b0b75dee76a1743, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a9801f7e61210734397d1df998ba179b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87ca9ce4f33cd3d48b0b75dee76a1743, type: 3}
 --- !u!1 &862072401
