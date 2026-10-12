@@ -38,6 +38,10 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private Image centerPortrait;
     [SerializeField] private Image rightPortrait;
 
+    private float leftX = -680;
+    private float centerX = -68;
+    private float rightX = 580;
+
     [Header("Dialogue State")]
     private int lineCount = 0; //대화 row 카운트
     private int contentCount = 0; //대사 카운트
@@ -188,10 +192,8 @@ public class DialogueUI : MonoBehaviour
         lineCount = 0;
         contentCount = 0;
 
-
+        HidePortraits();
         HideBubbles();
-
-        //PortraitManager.instance.HidePortrait();
     }
     #endregion
 
@@ -411,8 +413,44 @@ public class DialogueUI : MonoBehaviour
             }
 
             targetImage.sprite = portrait;
+            ApplyPortraitSetting(customer, targetImage, i);
             targetImage.gameObject.SetActive(true);
         }
+    }
+
+    public void ApplyPortraitSetting(CustomerData customer, Image targetImage, int customerIndex)
+    {
+        if (customer == null || targetImage == null)
+        {
+            return;
+        }
+
+        RectTransform rectTransform = targetImage.rectTransform;
+        PortraitSetting setting = customer.portraitSetting;
+
+        float positionX;
+
+        switch (customerIndex)
+        {
+            case 0:
+                positionX = leftX;
+                break;
+
+            case 1:
+                positionX = centerX;
+                break;
+
+            case 2:
+                positionX = rightX;
+                break;
+
+            default:
+                positionX = rightX;
+                break;
+        }
+
+        rectTransform.anchoredPosition = new Vector2(positionX, setting.positionY);
+        rectTransform.sizeDelta = customer.portraitSetting.size;
     }
 
     private Image GetPortraitImage(int customerIndex)

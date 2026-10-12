@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b41f2f9183ea484f8c5c12ec313eec7, type: 3}
+  m_Name: Day1_Chaee
+  m_EditorClassIdentifier: 
+  EventName: 
+  Customers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: e5194efb168a5dd408eb2ec26e7ec347, type: 2}
+  introList:
+  - Day1_Chaee_Intro
+  selectList:
+  - 
+  resultList:
+  - Day1_Chaee_Result
+  introCSV: 
+  selectCSV: 
+  resultCSV: 
+  OrderedDrinks:
+  - {fileID: 11400000, guid: 3299ddbe76f86894983c2c64a3a87cbf, type: 2}

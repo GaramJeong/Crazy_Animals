@@ -14,7 +14,11 @@ public class CustomerData : ScriptableObject
     public string CustomerDesc;
     [TextArea]
     public string CustomerHistory;
+
     public Sprite[] CustomerSprite;
+
+    [Header("Portrait Setting")]
+    public PortraitSetting portraitSetting;
 
     //public Sprite GetSprite(State state)
     //{
@@ -30,4 +34,14 @@ public class CustomerData : ScriptableObject
 
         return CustomerSprite[_index];
     }
+}
+
+[System.Serializable]
+public class PortraitSetting
+{
+    [Header("Position")]
+    public float positionY;
+
+    [Header("Size")]
+    public Vector2 size;
 }
