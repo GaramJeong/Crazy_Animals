@@ -17,6 +17,7 @@ public class Dictionarymanager : MonoBehaviour
     private static bool HasInstance = false;
     [SerializeField] public bool DicEnabled;
     [SerializeField] private Pages CurPage;
+    [SerializeField] private Pages PrevPage;
     [SerializeField] private int RecipePageIdx;
     [SerializeField] private GameObject[] PagesObj;
     [Header("Customer")]
@@ -47,13 +48,18 @@ public class Dictionarymanager : MonoBehaviour
 
     public void TurntoPage(int page)
     {
-        CurPage = (Pages)page;
         for (int i = 0; i < PagesObj.Length; i++)
             PagesObj[i].SetActive(false);
+        PrevPage = CurPage;
+        CurPage = (Pages)page;
 
         PagesObj[(int)CurPage].SetActive(true);
         switch (CurPage)
         {
+            case Pages.TITLE:
+                Animationmanager.instance.PlayAnim(0, "BookMarkInit1");
+                Animationmanager.instance.PlayAnim(1, "BookMarkInit2");
+                break;
             case Pages.CUSTOMER:
                 CustomerReload();
                 break;
@@ -69,6 +75,9 @@ public class Dictionarymanager : MonoBehaviour
 
     private void CustomerReload()
     {
+        if (PrevPage == Pages.RECIPES) Animationmanager.instance.PlayAnim(1, "BookMarkDeHighlighted2", true);
+        if (PrevPage == Pages.TITLE) Animationmanager.instance.PlayAnim(0, "BookMarkHighlighted1", true);
+
         if (CustomerLeftPar.childCount > 0) return;
 
         CustomerData[] customers = Resourcemanager.instance.allCustomers;
@@ -76,7 +85,7 @@ public class Dictionarymanager : MonoBehaviour
         for (int i = 0; i < customers.Length; i++)
         {
             GameObject customercell = null;
-            if (i < 10){
+            if (i < 6){
                 customercell = Instantiate(CustomerPrefab, CustomerLeftPar);
             }
             else{
@@ -123,6 +132,8 @@ public class Dictionarymanager : MonoBehaviour
     private void RecipesReload()
     {
         for (int i = 0; i < 5; i++){ Recipepages[i] = Recipe.GetChild(i); }
+        if (PrevPage == Pages.CUSTOMER) Animationmanager.instance.PlayAnim(0, "BookMarkDeHighlighted1", true);
+        if (PrevPage == Pages.TITLE) Animationmanager.instance.PlayAnim(1, "BookMarkHighlighted2", true);
 
         if (Recipe.GetChild(0).GetChild(0).childCount > 0) return;
 
@@ -186,6 +197,8 @@ public class Dictionarymanager : MonoBehaviour
 
         ArrowLeft = Recipe.GetChild(Recipe.childCount - 2).gameObject;
         ArrowRight = Recipe.GetChild(Recipe.childCount -1).gameObject;
+
+
     }
 
     string Recipetostring(List<BASE> bases, List<TOPPING> toppings)
@@ -216,6 +229,35 @@ public class Dictionarymanager : MonoBehaviour
     public void SetEnabled(bool _enabled)
     {
         DicEnabled = _enabled;
+    }
+
+    //BookMarkAnim
+    public void HighlightBookMark(int _idx)
+    {
+        if (_idx == 0)
+        {
+            if(CurPage != Pages.CUSTOMER) Animationmanager.instance.PlayAnim(0, "BookMarkHighlighted1", true);
+
+        }
+        else
+        {
+            if (CurPage != Pages.RECIPES)Animationmanager.instance.PlayAnim(1, "BookMarkHighlighted2", true);
+
+        }
+    }
+
+    public void DeHighlightBookMark(int _idx)
+    {
+        if (_idx == 0)
+        {
+            if (CurPage != Pages.CUSTOMER) Animationmanager.instance.PlayAnim(0, "BookMarkDeHighlighted1", true);
+
+        }
+        else
+        {
+            if (CurPage != Pages.RECIPES) Animationmanager.instance.PlayAnim(1, "BookMarkDeHighlighted2", true);
+
+        }
     }
 
 }

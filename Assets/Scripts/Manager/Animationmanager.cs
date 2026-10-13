@@ -35,6 +35,10 @@ public class Animationmanager : MonoBehaviour
         animqueue.Enqueue( animations[_Animidx]);
     }
 
+    public void PlayAnimForButton(int _Animidx)
+    {
+        animations[_Animidx].Play();
+    }
 
     bool IsPlaying()
     {
