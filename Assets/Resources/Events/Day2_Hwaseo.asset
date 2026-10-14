@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b41f2f9183ea484f8c5c12ec313eec7, type: 3}
+  m_Name: Day2_Hwaseo
+  m_EditorClassIdentifier: 
+  EventName: 
+  Customers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 07c35e443ffae1d40bf1c00943086072, type: 2}
+  introList:
+  - Day2_Hwaseo_Intro
+  selectList:
+  - 
+  resultList:
+  - Day2_Hwaseo_Result
+  introCSV: Day2_Hwaseo_Intro
+  selectCSV: 
+  resultCSV: Day2_Hwaseo_Result
+  OrderedDrinks:
+  - {fileID: 11400000, guid: 5f4fd8582fc22a5409b080cd3a14dfe2, type: 2}

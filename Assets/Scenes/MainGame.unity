@@ -1436,6 +1436,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 803c4b772033bfe4ebde7446f85f591a, type: 2}
     - {fileID: 11400000, guid: fbeaa711f43221949a41d3d80b3b2424, type: 2}
     - {fileID: 11400000, guid: 256ce7a1fd7d03142a1903418607ee96, type: 2}
+  - Events:
+    - {fileID: 11400000, guid: 23a3e69eb55eba14d8d43e3360065021, type: 2}
+    - {fileID: 11400000, guid: 875c9d577474ebe438af7af88f1fa4b3, type: 2}
+    - {fileID: 11400000, guid: 3a6847d67fabe6246a196ac5a69aee93, type: 2}
   Curevent: 0
   CurdrinkCount: 0
   CurDrinks: []

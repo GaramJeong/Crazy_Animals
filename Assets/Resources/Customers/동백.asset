@@ -31,3 +31,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 216795917b932794c86559ce13270880, type: 3}
   - {fileID: 21300000, guid: 216795917b932794c86559ce13270880, type: 3}
   - {fileID: 21300000, guid: 216795917b932794c86559ce13270880, type: 3}
+  - {fileID: 21300000, guid: 216795917b932794c86559ce13270880, type: 3}
+  portraitSetting:
+    positionY: 0
+    size: {x: 100, y: 100}

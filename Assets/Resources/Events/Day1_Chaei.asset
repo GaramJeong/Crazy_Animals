@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b41f2f9183ea484f8c5c12ec313eec7, type: 3}
-  m_Name: Day1_Chaee
+  m_Name: Day1_Chaei
   m_EditorClassIdentifier: 
   EventName: 
   Customers:
@@ -18,11 +18,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 11400000, guid: e5194efb168a5dd408eb2ec26e7ec347, type: 2}
   introList:
-  - Day1_Chaee_Intro
+  - Day1_Chaei_Intro
   selectList:
   - 
   resultList:
-  - Day1_Chaee_Result
+  - Day1_Chaei_Result
   introCSV: 
   selectCSV: 
   resultCSV: 
