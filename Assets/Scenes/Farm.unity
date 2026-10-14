@@ -11949,6 +11949,9 @@ MonoBehaviour:
   PaddingPrefab: {fileID: 8930509424569645018, guid: 300dfa2da5ab19e4181289f6b0f2fc3c, type: 3}
   ArrowLeft: {fileID: 126173231386713777}
   ArrowRight: {fileID: 126173231251742441}
+  BookMarkAnim:
+  - {fileID: 126173231736139228}
+  - {fileID: 126173231967121948}
 --- !u!4 &2669961127253317721
 Transform:
   m_ObjectHideFlags: 0

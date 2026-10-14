@@ -32,6 +32,7 @@ public class Dictionarymanager : MonoBehaviour
 
     [SerializeField] private GameObject ArrowLeft;
     [SerializeField] private GameObject ArrowRight;
+    [SerializeField] private Animation[] BookMarkAnim = new Animation[2];
 
     private void Awake()
     {
@@ -57,8 +58,8 @@ public class Dictionarymanager : MonoBehaviour
         switch (CurPage)
         {
             case Pages.TITLE:
-                Animationmanager.instance.PlayAnim(0, "BookMarkInit1");
-                Animationmanager.instance.PlayAnim(1, "BookMarkInit2");
+                BookMarkAnim[0].Play( "BookMarkInit1");
+                BookMarkAnim[1].Play("BookMarkInit2");
                 break;
             case Pages.CUSTOMER:
                 CustomerReload();
@@ -75,8 +76,8 @@ public class Dictionarymanager : MonoBehaviour
 
     private void CustomerReload()
     {
-        if (PrevPage == Pages.RECIPES) Animationmanager.instance.PlayAnim(1, "BookMarkDeHighlighted2", true);
-        if (PrevPage == Pages.TITLE) Animationmanager.instance.PlayAnim(0, "BookMarkHighlighted1", true);
+        if (PrevPage == Pages.RECIPES) BookMarkAnim[1].Play("BookMarkDeHighlighted2");
+        if (PrevPage == Pages.TITLE) BookMarkAnim[0].Play("BookMarkHighlighted1");
 
         if (CustomerLeftPar.childCount > 0) return;
 
@@ -132,8 +133,8 @@ public class Dictionarymanager : MonoBehaviour
     private void RecipesReload()
     {
         for (int i = 0; i < 5; i++){ Recipepages[i] = Recipe.GetChild(i); }
-        if (PrevPage == Pages.CUSTOMER) Animationmanager.instance.PlayAnim(0, "BookMarkDeHighlighted1", true);
-        if (PrevPage == Pages.TITLE) Animationmanager.instance.PlayAnim(1, "BookMarkHighlighted2", true);
+        if (PrevPage == Pages.CUSTOMER) BookMarkAnim[0].Play("BookMarkDeHighlighted1");
+        if (PrevPage == Pages.TITLE) BookMarkAnim[1].Play("BookMarkHighlighted2");
 
         if (Recipe.GetChild(0).GetChild(0).childCount > 0) return;
 
@@ -236,12 +237,12 @@ public class Dictionarymanager : MonoBehaviour
     {
         if (_idx == 0)
         {
-            if(CurPage != Pages.CUSTOMER) Animationmanager.instance.PlayAnim(0, "BookMarkHighlighted1", true);
+            if(CurPage != Pages.CUSTOMER) BookMarkAnim[0].Play("BookMarkHighlighted1");
 
         }
         else
         {
-            if (CurPage != Pages.RECIPES)Animationmanager.instance.PlayAnim(1, "BookMarkHighlighted2", true);
+            if (CurPage != Pages.RECIPES)BookMarkAnim[1].Play("BookMarkHighlighted2");
 
         }
     }
@@ -250,12 +251,12 @@ public class Dictionarymanager : MonoBehaviour
     {
         if (_idx == 0)
         {
-            if (CurPage != Pages.CUSTOMER) Animationmanager.instance.PlayAnim(0, "BookMarkDeHighlighted1", true);
+            if (CurPage != Pages.CUSTOMER) BookMarkAnim[0].Play("BookMarkDeHighlighted1");
 
         }
         else
         {
-            if (CurPage != Pages.RECIPES) Animationmanager.instance.PlayAnim(1, "BookMarkDeHighlighted2", true);
+            if (CurPage != Pages.RECIPES) BookMarkAnim[1].Play("BookMarkDeHighlighted2");
 
         }
     }
